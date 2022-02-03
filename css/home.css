@@ -1,0 +1,134 @@
+@font-face {
+    font-family: "Deutsch";
+    src: url("../fonts/Deutsch.ttf");
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/textura.jpg);
+    background-attachment: fixed;
+    font-family: 'Deutsch';
+}
+.btn-añadir{
+    
+    margin-top: -100px;
+}
+.row{
+    width: 100%;
+}
+
+.titulo {
+    text-align: center;
+    font-family: 'Deutsch';
+    font-size: 85px;
+}
+
+.header {
+    width: 100%;
+    height: 240px;
+}
+
+main {
+    display: flex;
+}
+
+.container {
+    position: relative;
+    width: 1600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin: auto;
+}
+
+.container .card {
+    background: #fff;
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover {
+    height: 420px;
+}
+
+.container .card .imgBx {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2)
+}
+
+.container .card .imgBx img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.imgBx img {
+    width: 85%;
+    height: 85%;
+}
+
+@supports(object-fit: cover) {
+    .box img {
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+    }
+}
+
+.container .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color: #111;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container .card:hover .content {
+    visibility: visibility;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+
+.clasificacion {
+    visibility: visible;
+}
+
+/* RESPONSIVE */
+
+@media (min-width: 600px) {
+    .header {
+        height: 508px;
+    }
+}
+
+@media (min-width: 600px) {
+    .header {
+        height: 508px;
+    }
+}
